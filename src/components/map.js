@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Button, ButtonGroup, ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
- 
+
 class Example extends Component {
     constructor(props) { 
         super(props);
@@ -19,47 +19,49 @@ class Example extends Component {
 
     render() {
         return (
-            <div className="container things">
-                <div className="row things">                             
-                    <div className="viewerbox col-12 col-lg-9">
-                        <TransformWrapper
-                            defaultScale={1}
-                            defaultPositionX={200}
-                            defaultPositionY={100}
-                        >
-                            {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-                                <React.Fragment>
-                                    <ButtonGroup className="toolbar">
-                                        <Button outline color="secondary" onClick={zoomIn}>zoom in</Button>
-                                        <Button outline color="secondary" onClick={zoomOut}>zoom out</Button>
-                                        <Button outline color="secondary" onClick={resetTransform}>reset</Button> 
-                                    </ButtonGroup>
-                                    <TransformComponent>
-                                        <img src="gun.jpg" className="gunpic" alt="test" />
-                                    </TransformComponent>
-                                </React.Fragment>
-                            )}
-                        </TransformWrapper>
+            <TransformWrapper
+                defaultScale={1}
+                defaultPositionX={200}
+                defaultPositionY={100}
+            >
+                {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+                    <React.Fragment>
+                    <div className="container things">
+                        <div className="row stuff">
+                            <ButtonGroup className="toolbar">
+                                <Button outline color="secondary" onClick={zoomIn}>zoom in</Button>
+                                <Button outline color="secondary" onClick={zoomOut}>zoom out</Button>
+                                <Button outline color="secondary" onClick={resetTransform}>reset</Button>
+                            </ButtonGroup>
+                            <ListGroupItemHeading className="title">related content</ListGroupItemHeading>
+                        </div>
+                        <div className="row things">
+                            <div className="viewerbox col-12 col-lg-9">
+                                <TransformComponent>
+                                    <img src="gun.jpg" className="gunpic" alt="test" />
+                                </TransformComponent>
+                            </div>
+                            <div className="viewerbox col-12 col-lg-3 pt-sm-3 pt-lg-0">
+                            <ListGroup flush>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin pt-xl-2">source</ListGroupItem>
+                                <ListGroupItem className="addpin mb-sm-2 mt-sm-2 pt-sm-2 mb-xl-3 mt-xl-4 pt-xl-4 pb-xl-4" onClick={this.setActive} active={this.state.isActive} tag="a" href="#" action>add pin</ListGroupItem>
+                            </ListGroup>
+                            </div>
+                        </div>
                     </div>
-                    <div className="viewerbox col col-lg-3">
-                        <ListGroup flush>
-                            <ListGroupItemHeading className="title">related content</ListGroupItemHeading>  
-                                <ListGroupItem className="addpin1">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin">source</ListGroupItem>
-                                <ListGroupItem className="addpin" onClick={this.setActive} active={this.state.isActive} tag="a" href="#" action>add pin</ListGroupItem>
-                        </ListGroup>
-                    </div>
-                </div>
-            </div>
+                    </React.Fragment>
+                )}
+            </TransformWrapper>
         );
     }
 }
