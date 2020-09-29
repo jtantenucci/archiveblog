@@ -1,7 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-social/bootstrap-social.css';
+import 'reactstrap';
 import './index.css';
 import App from './App';
+import './font/HelveticaWorld-Regular.ttf';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

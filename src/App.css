@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+
+:root {
+  --primary: #27292e;
+  --secondary: #dbdde2;
+  --tertiary: #1a1b1d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'HelveticaWorld';
+  background-color: var(--tertiary);
+  color: var(--secondary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  background-color: var(--tertiary);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+div.container.things {
+  background-color: var(--primary);
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  align-items: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+div.row.things {
+  background-color: var(--primary);
+  padding: 10px;
+  border: 7px solid var(--primary);
+  border-radius: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li.list-group-item {
+  padding-right: 10px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-color: var(--secondary);
+}
+
+.addpin {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 15px;
+  padding-right: 10px;
+  padding-top: 5px;
+
+}
+
+
+li.addpin1.list-group-item {
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 15px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-top: 1px solid var(--secondary);
+}
+li.addpin1.list-group-item:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.addpin.active, .addpin:focus {
+  background-color:var(--secondary);
+  color: var(--primary);
+  padding-right: 10px;
+  border-radius: 5px;
+}
+
+a.addpin {
+  font-style: oblique;
+  font-weight: 600;
+}
+
+.addpin:hover {
+  background-color:var(--secondary);
+  color: var(--primary);
+  padding-right: 10px;
+}
+
+h1.display-3 {
+  color: var(--secondary);
+  text-shadow: 0.5px 0.5px 5px rgb(245, 248, 252);
+}
+
+.lead {
+  text-shadow: 0.5px 0.5px 3px rgb(245, 248, 252);
+}
+
+hr {
+  margin: 5px;
+}
+
+.btn-outline-secondary {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-color: var(--secondary);
+}
+
+div.toolbar.btn-group {
+  justify-self: flex-start;
+  padding-bottom: 10px;
+}
+
+.title {
+  padding: 10px;
+  text-align: right;
+  font-weight: 100;
+  font-size: 26px;
+  font-style: oblique;
+  color: var(--secondary);
+  text-shadow: 0.5px 0.5px 5px rgb(245, 248, 252);
+}
+
+
+
+div.viewerbox.col-lg-3 {
+  text-align: end;
+  align-self: flex-end;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  width: max-content;
+  padding: 0px;
+}
+
+div.viewerbox.col-lg-9 {
+  padding: 0px;
+}
+
+a.nav-link.active {
+  color: aliceblue;
+}
+
+.react-transform-component {
+  width: unset !important;
+  height: unset !important;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+}
+
+
+.react-transform-element {
+  width: unset !important;
+  height: unset !important;
+  border-radius: 5px;
+}
+
+img {
+  max-width:  100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.homepage-jumbotron {
+  padding: 5px;
+  background-color: var(--primary);
 }
