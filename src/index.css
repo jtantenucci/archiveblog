@@ -3,6 +3,6 @@
   src: local('HelveticaWorld'), url(./font/HelveticaWorld-Regular.ttf) format('truetype');
 }
 
-.navbar {
+.App {
   background-color: #333333;
 }

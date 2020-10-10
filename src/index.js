@@ -4,14 +4,21 @@ import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-social/bootstrap-social.css';
 import 'reactstrap';
+import '@material-ui/core';
+import theme from './themes/testingtheme'
+import '@material-ui/core/styles';
 import './index.css';
 import App from './App';
 import './font/HelveticaWorld-Regular.ttf';
 import * as serviceWorker from './serviceWorker';
+import { ThemeProvider } from '@material-ui/core';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
