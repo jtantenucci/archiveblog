@@ -2,8 +2,8 @@ import React from 'react';
 import { tileData } from '../shared/tileData';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
-import { Grid, GridList, GridListTile, IconButton, GridListTileBar, ListSubheader, Box, Paper, Toolbar} from '@material-ui/core';
-import grey from '@material-ui/core/colors/grey'
+import { Box, Grid, GridList, GridListTile, GridListTileBar, 
+    IconButton, ListSubheader, Paper, Toolbar} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
     content: {
         flexGrow: 1,
         fontStyle: 'oblique',
-        color: grey[100],
-        backgroundColor: grey[700],
+        color: theme.palette.secondary.light,
+        backgroundColor: theme.palette.primary.main,
     },
 }));
 

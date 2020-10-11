@@ -1,11 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { NavLink } from 'react-router-dom'
-import { Avatar, Button, Paper, MenuItem, MenuList, Popper, Grow, ClickAwayListener } from '@material-ui/core';
-import grey from '@material-ui/core/colors/grey'
+import { AppBar, Avatar, Button, ClickAwayListener, 
+  Grow, MenuItem, MenuList, Paper, 
+  Popper, Toolbar, Typography } from '@material-ui/core';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,13 +19,13 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
       fontFamily: 'HelveticaWorld',
-      color: grey[100],
+      color: theme.palette.secondary.light,
   },
   title: {
       flexGrow: 1,
       fontStyle: 'oblique',
       fontFamily: 'HelveticaWorld',
-      color: grey[100],
+      color: theme.palette.secondary.light,
   },
   containerStyle: {
       fontStyle: 'oblique',
@@ -37,15 +35,15 @@ const useStyles = makeStyles((theme) => ({
   content: {
       flexGrow: 1,
       fontStyle: 'oblique',
-      color: grey[100],
-      backgroundColor: grey[700],
+      color: theme.palette.secondary.light,
+      backgroundColor: theme.palette.primary.main,
   },
   avatar: {
       width: theme.spacing(3),
       margin: theme.spacing(1),
       height: theme.spacing(3),
-      color: grey[100],
-      backgroundColor: grey[800],
+      color: theme.palette.secondary.light,
+      backgroundColor: theme.palette.primary.dark,
   }
 }));
 

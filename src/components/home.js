@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Divider, Drawer, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
+import HomeCard from './card';
 import { makeStyles } from '@material-ui/core';
-import grey from '@material-ui/core/colors/grey'
+import { Divider, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
+
 
 const drawerWidth = 200;
 
@@ -36,7 +37,7 @@ export default function Home() {
         <main className={classes.root}>
             <Paper elevation={3} variant="rounded">
             <Toolbar />
-                <Grid container spacing={3} className={classes.content}>
+                <Grid container spacing={2} className={classes.content}>
                     <Grid item xs={12}>
                         <Typography variant="h2">what is archive fashion?</Typography>
                     </Grid>
@@ -62,6 +63,26 @@ export default function Home() {
                             researching and hunting for it meaning it requires more than just money to become an 
                             archival fashion collector.
                         </Typography>
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HomeCard />
+                        <HomeCard />
+                        <HomeCard />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HomeCard />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HomeCard />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HomeCard />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HomeCard />
+                    </Grid>
+                    <Grid item xs={6}>
+                        <HomeCard />
                     </Grid>
                     <Grid item xs={12}>
                         <Divider />
