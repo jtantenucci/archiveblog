@@ -43,14 +43,11 @@ export default function HelmutMenu() {
       </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" dense disablePadding>
-                <ListItem button className={classes.nested2}>
-                    <ListItemText primary="fear generation aw02" />
+                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                    <ListItemText primary="untitled aw98" />
                 </ListItem>
-                <ListItem button component={NavLink} to="/rafconsumed" className={classes.nested2}>
-                    <ListItemText primary="consumed ss03" />
-                </ListItem>
-                <ListItem button className={classes.nested2}>
-                    <ListItemText primary="virginia creeper aw03" />
+                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                    <ListItemText primary="séance de travail aw99" />
                 </ListItem>
             </List>
         </Collapse>

@@ -9,17 +9,17 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        width: '100%',
-        maxWidth: 200,
-        backgroundColor: theme.palette.primary.main,
-    },
-    nested: {
-        paddingLeft: theme.spacing(3),
-    },
-    nested2: {
-        paddingLeft: theme.spacing(5),
-    },
+  root: {
+    width: '100%',
+    maxWidth: 200,
+    backgroundColor: theme.palette.primary.main,
+  },
+  nested: {
+    paddingLeft: theme.spacing(3),
+  },
+  nested2: {
+    paddingLeft: theme.spacing(5),
+  },
 }));
 
 export default function TakahiroMenu() {
@@ -43,14 +43,14 @@ export default function TakahiroMenu() {
       </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" dense disablePadding>
-                <ListItem button className={classes.nested2}>
-                    <ListItemText primary="fear generation aw02" />
+                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                    <ListItemText primary="give peace a chance aw04" />
                 </ListItem>
-                <ListItem button component={NavLink} to="/rafconsumed" className={classes.nested2}>
-                    <ListItemText primary="consumed ss03" />
+                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                    <ListItemText primary="the high streets aw05" />
                 </ListItem>
-                <ListItem button className={classes.nested2}>
-                    <ListItemText primary="virginia creeper aw03" />
+                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                    <ListItemText primary="a closed feeling aw09" />
                 </ListItem>
             </List>
         </Collapse>
