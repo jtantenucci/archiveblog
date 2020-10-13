@@ -10,15 +10,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.light,
     backgroundColor: theme.palette.primary.main,
   },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-    color: theme.palette.secondary.dark,
-  },
   pos: {
     marginBottom: 12,
     color: theme.palette.secondary.dark,
@@ -29,26 +20,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function HomeCard() {
+export default function MainCard() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography variant="h5" component="h2">
-          ar{bull}chive
-        </Typography>
-        <Typography className={classes.pos} color="textSecondary">
-          noun
-        </Typography>
         <Typography variant="body2" component="p" className={classes.main}>
-          a collection of historical documents or records providing information about a place, institution, or group of people. "source materials in local archives"
-          <br />
-        </Typography>
-        <Typography variant="body2" component="p" className={classes.main}>
-          any extensive record or collection of data          
-          <br />
+          when it comes to archive fashion, many are confused. archive fashion is heavily valued when you can understand the significance of it within the context of the time it existed. many groundbreaking trends and stylistic decisions were made decades ago - things that would change the landscape of fashion forever. for this reason, it is very interesting to many to study reasons why things stuck around and what will come in the future that provides a similar impact on the medium as a whole.
         </Typography>
         <Typography variant="body2" component="p" className={classes.pos} style={{marginBottom: 0}}>
           {'to the archives, no longer relevant - raf simons, 2015'}

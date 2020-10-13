@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import { NavLink } from 'react-router-dom';
 import { AppBar, Avatar, Button, ClickAwayListener, 
   Grow, MenuItem, MenuList, Paper, 
   Popper, Toolbar, Typography } from '@material-ui/core';
@@ -77,7 +78,7 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.root}>
-          <Typography variant="h6" className={classes.title} noWrap>
+          <Typography variant="h6" component={NavLink} to="/home" className={classes.title} noWrap>
             archive fashion
           </Typography>
           <Button 

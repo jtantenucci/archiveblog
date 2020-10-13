@@ -1,33 +1,41 @@
 import React from 'react';
+import MainCard from './hometext.js';
 import HomeCard from './card';
+import HomeCardImage from './galleries/HomepageGallery';
 import { makeStyles } from '@material-ui/core';
-import { Divider, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
-
-
-const drawerWidth = 200;
+import { Card, Divider, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        flexGrow: 1,
         paddingLeft: 200,
-        display: 'flex',
         backgroundColor: theme.palette.primary.main,
-        flexGrow: 1,
         color: theme.palette.secondary.light,
+        overflowX: 'hidden',
     },
-    drawer: {
-        width: drawerWidth,
-        flexShrink: 0,
-    },
-    content: {
-        flexGrow: 1,
-        fontStyle: 'oblique',
-        color: theme.palette.secondary.light,
-        backgroundColor: theme.palette.primary.main,
-        padding: theme.spacing(4),
+    title: {
+        fontSize: 14,
     },
     divider: {
-
-    }
+        color: theme.palette.secondary.light,
+        paddingBottom: theme.spacing(1),
+        backgroundColor: theme.palette.primary.main,
+    },
+    gridList: {
+        flexWrap: 'nowrap',
+    },
+    pageHead: {
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.secondary.light,
+        textShadow: "1px 1px 6px grey",
+    },
+    content: {
+        overflow: 'hidden',
+        fontStyle: 'oblique',
+        padding: theme.spacing(1),
+        color: theme.palette.secondary.light,
+        backgroundColor: theme.palette.primary.main,
+    },
 }));
 
 export default function Home() {
@@ -35,65 +43,34 @@ export default function Home() {
 
     return (
         <main className={classes.root}>
-            <Paper elevation={3} variant="rounded">
+            <Paper elevation={3} variant="rounded" className={classes.content}>
             <Toolbar />
-                <Grid container spacing={2} className={classes.content}>
+                <Grid item direction="row" spacing={1} xs={12}>
+                    <Typography variant="h2" className={classes.pageHead}>
+                        what is archive fashion?
+                    </Typography>
+                </Grid>
+                <Divider className={classes.divider}/>
+                <Grid container direction="row" alignItems="center" justify="center" spacing={1}>
                     <Grid item xs={12}>
-                        <Typography variant="h2">what is archive fashion?</Typography>
+                        <Card className={classes.content} elevation="0" style={{height: 15 }}/>
                     </Grid>
-                    <Grid item xs={12}>
-                        <Divider />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <Typography variant="p">What is archive clothing? At its most superficial, 
-                            it’s owning an exceedingly rare piece of designer clothing to stunt in. 
-                            At its most obsessive, it means becoming an archivist of your favorite designer, 
-                            researching, collecting and reselling their rarest pieces out of sheer love, 
-                            and maybe a little bit of one-upmanship. Strictly speaking, 
-                            archival fashion is any piece of clothing taken from a designer’s past body of work, 
-                            but in the last few years it has come to describe specific pieces from 
-                            historically significant menswear collections. 
-                            Archive clothing is essentially the obsessiveness of stamp collecting, 
-                            sneakerhead culture, or Pokemon cards but applied to fashion. 
-                            But unlike the people you find in the lineup outside Supreme or Palace, 
-                            archival fashion collectors are more interested in the old rather than the new. 
-                            As the entry point into the world of streetwear and high-fashion has become so accessible 
-                            to many, archive clothing is seen as the last bastion of authenticity in fashion – 
-                            no one owns a piece of archive fashion without dedicating time and energy 
-                            researching and hunting for it meaning it requires more than just money to become an 
-                            archival fashion collector.
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={6}>
-                        <HomeCard />
-                        <HomeCard />
+                    <Grid item xs={12} sm={4}>
                         <HomeCard />
                     </Grid>
-                    <Grid item xs={6}>
-                        <HomeCard />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <HomeCard />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <HomeCard />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <HomeCard />
-                    </Grid>
-                    <Grid item xs={6}>
-                        <HomeCard />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Divider />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Divider />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Divider />
+                    <Grid item xs={12} sm={8}>
+                        <HomeCardImage />
                     </Grid>
                 </Grid>
+
+                <Grid container direction="row" justify="flex-end" spacing={1}>
+                    <Grid item xs={12} sm={8}>
+                        <MainCard />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Card className={classes.content} elevation="0" style={{height: 400}}/>
+                    </Grid>
+                </Grid> 
             </Paper>
         </main>
     );

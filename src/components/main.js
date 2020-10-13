@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import MenuDrawer from './menudrawer'
 import Header from './header';
 import Home  from './home';
-import RafConsumed from './rafconsumed';
+import ConsumedGallery from './galleries/ConsumedGallery';
+import FearGallery from './galleries/FearGallery';
+import VirginiaGallery from './galleries/VirginiaGallery';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
@@ -16,8 +18,14 @@ class Main extends Component {
                     <Route path="/home">
                         <Home />
                     </Route>
-                    <Route path="/rafconsumed">
-                        <RafConsumed />
+                    <Route path="/ConsumedGallery">
+                        <ConsumedGallery />
+                    </Route>
+                    <Route path="/FearGallery">
+                        <FearGallery />
+                    </Route>
+                    <Route path="/VirginiaGallery">
+                        <VirginiaGallery />
                     </Route>
                     <Redirect to="/home" />
                 </Switch>

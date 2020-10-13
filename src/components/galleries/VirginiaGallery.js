@@ -1,5 +1,5 @@
 import React from 'react';
-import { tileData } from '../shared/tileData';
+import { virginiaCreeper } from '../shared/virginiaCreeper';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
 import { Box, Grid, GridList, GridListTile, GridListTileBar, 
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     listSubheader: {
         fontStyle: 'oblique',
-        color: theme.palette.primary.light,
+        color: theme.palette.secondary.light,
     },
     content: {
         flexGrow: 1,
@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function RafConsumed() {
+export default function VirginiaGallery() {
     const classes = useStyles();
     
     return (
@@ -42,7 +42,7 @@ export default function RafConsumed() {
                         'consumed ss03 lookbook'
                     </ListSubheader>
                     </GridListTile>
-                    {tileData.map((tile) => (
+                    {virginiaCreeper.map((tile) => (
                     <GridListTile key={tile.img} cols={tile.cols || 1}>
                         <img src={tile.img} alt={tile.title} />
                         <GridListTileBar
