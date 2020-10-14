@@ -2,7 +2,7 @@ import React from 'react';
 import MainCard from './hometext.js';
 import HomeCard from './card';
 import HomeCardImage from './galleries/HomepageGallery';
-import { makeStyles } from '@material-ui/core';
+import { Box, makeStyles } from '@material-ui/core';
 import { Card, Divider, Grid, Paper, Toolbar, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -21,21 +21,26 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: theme.spacing(1),
         backgroundColor: theme.palette.primary.main,
     },
-    gridList: {
-        flexWrap: 'nowrap',
-    },
     pageHead: {
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.secondary.light,
         textShadow: "1px 1px 6px grey",
     },
     content: {
-        overflow: 'hidden',
         fontStyle: 'oblique',
-        padding: theme.spacing(1),
         color: theme.palette.secondary.light,
         backgroundColor: theme.palette.primary.main,
     },
+    image: {
+        width: 128,
+        height: 128,
+    },
+    img: {
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+      },
 }));
 
 export default function Home() {
@@ -45,29 +50,30 @@ export default function Home() {
         <main className={classes.root}>
             <Paper elevation={3} variant="rounded" className={classes.content}>
             <Toolbar />
-                <Grid item direction="row" spacing={1} xs={12}>
+                <Grid container direction="row" spacing={1} xs={12}>
                     <Typography variant="h2" className={classes.pageHead}>
                         what is archive fashion?
                     </Typography>
                 </Grid>
-                <Divider className={classes.divider}/>
-                <Grid container direction="row" alignItems="center" justify="center" spacing={1}>
-                    <Grid item xs={12}>
-                        <Card className={classes.content} elevation="0" style={{height: 15 }}/>
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
+                <Grid container direction="row" alignItems="flex-start" justify="flex-start" spacing={2} wrap="nowrap">
+                    <Grid xs={12} sm={4}>
                         <HomeCard />
                     </Grid>
-                    <Grid item xs={12} sm={8}>
+                    <Grid xs={12} sm={8}>
                         <HomeCardImage />
                     </Grid>
                 </Grid>
 
-                <Grid container direction="row" justify="flex-end" spacing={1}>
-                    <Grid item xs={12} sm={8}>
+                <Grid container direction="row" alignItems="flex-start" justify="flex-start" spacing={1} wrap="nowrap">
+                    <Grid xs={12} sm={8}>
                         <MainCard />
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid xs={12} sm={4}>
+                        <Box className={classes.image}>
+                            <img className={classes.img} src="./gridimages/rafgirl.jpg" alt="rafgirl" />
+                        </Box>
+                    </Grid>
+                    <Grid xs={12}>
                         <Card className={classes.content} elevation="0" style={{height: 400}}/>
                     </Grid>
                 </Grid> 

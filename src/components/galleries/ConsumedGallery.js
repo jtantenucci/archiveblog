@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
     listSubheader: {
         fontStyle: 'oblique',
-        color: theme.palette.primary.light,
+        color: theme.palette.secondary.light,
     },
     content: {
         flexGrow: 1,

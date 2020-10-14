@@ -35,16 +35,14 @@ export default function HomepageGallery() {
     
     return (
     <main className={classes.content}>
-                <GridList cellHeight={275} className={classes.gridList} cols={4}>
-                    {homepageGallery.map((tile) => (
-                    <GridListTile component={Card} className={classes.gridListTile} key={tile.img} cols={tile.cols || 1}>
+        <GridList cellHeight={275} className={classes.gridList} cols={12}>
+            {homepageGallery.map((tile) => (
+                <GridListTile component={Card} className={classes.gridListTile} key={tile.img} rows={tile.rows || 1} cols={tile.cols || 1}>
                     <img src={tile.img} alt={tile.title} />
-                    <GridListTileBar
-                            title="c/o raf simons redux"
-                            />
+                    <GridListTileBar title="c/o raf simons redux"/>
                 </GridListTile>
-                    ))}
-            </GridList>
+            ))}
+        </GridList>
     </main>
     );
 }

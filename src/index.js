@@ -12,13 +12,16 @@ import App from './App';
 import './font/HelveticaWorld-Regular.ttf';
 import * as serviceWorker from './serviceWorker';
 import { ThemeProvider } from '@material-ui/core';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 ReactDOM.render(
   <React.StrictMode>
+    <Router>
       <ThemeProvider theme={theme}>
         <App />
       </ThemeProvider>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
