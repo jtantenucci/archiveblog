@@ -1,0 +1,152 @@
+export const consumedGallery = [
+    {
+        img: "./consumed/3.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/15.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/18.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./consumed/26.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./consumed/7.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/2.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/10.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 12,
+        rows: 2,
+    },
+    {
+        img: "./consumed/25.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 8,
+        rows: 1,
+    },
+    {
+        img: "./consumed/12.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 4,
+    },
+    {
+        img: "./consumed/23.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 12,
+    },
+    {
+        img: "./consumed/29.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./consumed/30.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 4,
+    },
+]
+
+export const consumedGallery2 = [
+    {
+        img: "./consumed/24.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 12,
+        rows: 2,
+    },
+    {
+        img: "./consumed/21.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/16.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/17.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/11.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./consumed/13.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./consumed/14.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./consumed/31.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 12,
+    },
+    {
+        img: "./consumed/32.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 4,
+    },
+    {
+        img: "./consumed/33.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./consumed/28.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./consumed/27.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 4,
+    },
+]

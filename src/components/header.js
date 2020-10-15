@@ -78,7 +78,7 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.root}>
-          <Typography variant="h6" component={NavLink} to="/home" className={classes.title} noWrap>
+          <Typography variant="h6" component={NavLink} to="/" className={classes.title} noWrap>
             archive fashion
           </Typography>
           <Button 

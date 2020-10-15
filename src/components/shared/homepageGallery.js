@@ -1,15 +1,19 @@
 export const homepageGallery = [
     {
-        img: "./gridimages/arch.jpg",
+        img: "./gridimages/rafresize.jpg",
         title: 'secondlook',
         author: '',
-        cols: 8,
+        cols: 12,
         rows: 1,
     },
+];
+
+export const homepageGallery2 = [
     {
         img: "./gridimages/rafgirl.jpg",
         title: 'secondlook',
-        author: true,
-        cols: 4,
+        author: '',
+        cols: 12,
+        rows: 2,
     },
 ];

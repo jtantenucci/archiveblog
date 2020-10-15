@@ -55,14 +55,26 @@ export const virginiaCreeper = [
         title: 'secondlook',
         author: '',
         cols: 8,
-        rows:2,
+        rows: 2,
     },
     {
-        img: "./virginia/4.jpg",
+        img: "./virginia/16.jpg",
         title: 'firstlook',
         author: '',
         cols: 4,
         rows: 2,
+    },
+    {
+        img: "./virginia/2.jpg",
+        title: 'firstlook',
+        author: '',
+        cols: 2,
+    },
+    {
+        img: "./virginia/6.jpg",
+        title: 'firstlook',
+        author: '',
+        cols: 2,
     },
     {
         img: "./virginia/12.jpg",
@@ -74,7 +86,7 @@ export const virginiaCreeper = [
         img: "./virginia/13.jpg",
         title: 'secondlook',
         author: '',
-        cols: 4,
+        cols: 2,
     },
     {
         img: "./virginia/14.jpg",
@@ -86,7 +98,7 @@ export const virginiaCreeper = [
         img: "./virginia/15.jpg",
         title: 'firstlook',
         author: '',
-        cols: 4,
+        cols: 2,
     },
 ];
 

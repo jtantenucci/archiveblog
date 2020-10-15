@@ -16,6 +16,10 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         color: 'rgba(255, 255, 255, 0.54)',
     },
+    titleBar: {
+        background:
+          'linear-gradient(to top, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+    },
     listSubheader: {
         fontStyle: 'oblique',
         color: theme.palette.secondary.light,
@@ -25,6 +29,8 @@ const useStyles = makeStyles((theme) => ({
         fontStyle: 'oblique',
         color: theme.palette.secondary.light,
         backgroundColor: theme.palette.primary.main,
+    },
+    imgFullWidth: {
     },
 }));
 
@@ -37,16 +43,17 @@ export default function FearGallery() {
             <Toolbar />
             <Box className={classes.root}>
                 <Grid xs={12}>
-                <GridList cellHeight={400} className={classes.gridList} cols={6} spacing={2}>
+                <GridList cellHeight={500} className={classes.gridList} cols={12} spacing={2}>
                     <GridListTile key="Subheader" cols={12} style={{ height: 'auto' }}>
                     <ListSubheader component="div" className={classes.listSubheader}>
-                        'fear generation aw02 lookbook'
+                        "woe unto those who spit on the fear generation ... the wind will blow it back" - autumn/winter 2002
                     </ListSubheader>
                     </GridListTile>
                     {fearGeneration.map((tile) => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1}>
+                    <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                         <img src={tile.img} alt={tile.title} />
                         <GridListTileBar
+                            className={classes.titleBar}
                             title={tile.title}
                             subtitle={<span>by: raf</span>}
                             actionIcon={

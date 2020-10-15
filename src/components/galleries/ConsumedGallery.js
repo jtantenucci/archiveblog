@@ -1,5 +1,6 @@
 import React from 'react';
-import { tileData } from '../shared/tileData';
+import { consumedGallery } from '../shared/consumedGallery';
+import { consumedGallery2 } from '../shared/consumedGallery';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
 import { Box, Grid, GridList, GridListTile, GridListTileBar, 
@@ -13,11 +14,19 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     icon: {
-        color: 'rgba(255, 255, 255, 0.54)',
+        color: 'rgba(255, 255, 255, 0.54)',   
+    },
+    titleBar: {
+        background:
+          'linear-gradient(to top, rgba(0,0,0,0.7) 10%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
     },
     listSubheader: {
         fontStyle: 'oblique',
         color: theme.palette.secondary.light,
+    },
+    sub: {
+        color: theme.palette.primary.dark,
+        paddingLeft: 2,
     },
     content: {
         flexGrow: 1,
@@ -35,28 +44,55 @@ export default function ConsumedGallery() {
         <Paper elevation={3} variant="rounded">
             <Toolbar />
             <Box className={classes.root}>
-                <Grid xs={12}>
-                <GridList cellHeight={400} className={classes.gridList} cols={6} spacing={2}>
-                    <GridListTile key="Subheader" cols={12} style={{ height: 'auto' }}>
-                    <ListSubheader component="div" className={classes.listSubheader}>
-                        'consumed ss03 lookbook'
-                    </ListSubheader>
-                    </GridListTile>
-                    {tileData.map((tile) => (
-                    <GridListTile key={tile.img} cols={tile.cols || 1}>
-                        <img src={tile.img} alt={tile.title} />
-                        <GridListTileBar
-                            title={tile.title}
-                            subtitle={<span>by: raf</span>}
-                            actionIcon={
-                            <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                                <InfoIcon />
-                            </IconButton>
-                                }
-                            />
-                    </GridListTile>
-                        ))}
-                </GridList>
+                <Grid container direction="row" alignItems="center" justify="center" xs={12}>
+                    <Grid item container xs={6}>
+                    <GridList cellHeight={500} className={classes.gridList} cols={12} spacing={2}>
+                        <GridListTile key="Subheader" cols={12} style={{ height: 'auto' }}>
+                        <ListSubheader component="div" className={classes.listSubheader}>
+                            "consumed" - spring/summer 2003
+                        </ListSubheader>
+                        </GridListTile>
+                        {consumedGallery.map((tile) => (
+                        <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                                className={classes.titleBar}
+                                title={tile.title}
+                                subtitle={<span>by: raf simons</span>}
+                                actionIcon={
+                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                    <InfoIcon />
+                                </IconButton>
+                                    }
+                                />
+                        </GridListTile>
+                            ))}
+                    </GridList>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                    <GridList cellHeight={500} className={classes.sub} cols={12} spacing={2}>
+                        <GridListTile key="Subheader" cols={12} style={{ height: '52' }}>
+                        <ListSubheader className={classes.sub}>
+                            ' '
+                        </ListSubheader>
+                        </GridListTile>
+                        {consumedGallery2.map((tile) => (
+                        <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
+                            <img src={tile.img} alt={tile.title} />
+                            <GridListTileBar
+                                className={classes.titleBar}
+                                title={tile.title}
+                                subtitle={<span>by: raf simons</span>}
+                                actionIcon={
+                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                    <InfoIcon />
+                                </IconButton>
+                                    }
+                                />
+                        </GridListTile>
+                            ))}
+                    </GridList>
+                    </Grid>
                 </Grid>
             </Box>
         </Paper>

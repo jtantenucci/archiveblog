@@ -1,4 +1,5 @@
 import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './components/header';
 import DrawerRouter from './components/listrouter';
 import Home  from './components/home';
@@ -21,10 +22,11 @@ export default function App() {
   const classes = useStyles();
   return (
       <div className={classes.container}>
+        <CssBaseline />
         <Header />
         <DrawerRouter />
         <Switch>
-            <Route exact from="/home" render={props => <Home {...props} />} />
+            <Route exact from="/" render={props => <Home {...props} />} />
             <Route exact from="/FearGallery" render={props => <FearGallery {...props} />} />
             <Route exact from="/ConsumedGallery" render={props => <ConsumedGallery {...props} />} />
             <Route exact from="/VirginiaGallery" render={props => <VirginiaGallery {...props} />} />

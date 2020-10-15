@@ -10,7 +10,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import EcoIcon from '@material-ui/icons/Eco';
 import ListItemText from '@material-ui/core/Link';
 import { MemoryRouter as Router, withRouter } from 'react-router';
-import { ListItemIcon, Toolbar, Collapse } from '@material-ui/core';
+import { ListItemIcon, Toolbar, Collapse, Paper } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import grey from '@material-ui/core/colors/grey'
 import { ListItem, Drawer } from '@material-ui/core';
@@ -66,7 +66,7 @@ const DrawerRouter = (props) => {
     {
       text: "home",
       icon: <HomeIcon />,
-      onClick: () => history.push('/home')
+      onClick: () => history.push('/')
     },
     {
       text: "designers",
@@ -93,6 +93,7 @@ const DrawerRouter = (props) => {
 
   return (
     <div className={classes.root}>
+    <Paper elevation={3}>
       <Drawer 
       variant="permanent" 
       className={classes.drawer}
@@ -101,27 +102,29 @@ const DrawerRouter = (props) => {
       }}
       >
       <Toolbar />
+
         <List 
-        dense
-        >
-          {itemsList.map((item, index)=> {
-            const { text, icon, onClick, expandable } = item;
-              return(
-                <> 
-                <ListItem button key={text} onClick={onClick} activeStyle={{fontWeight: "bold", color: "red"}}>
-                  <ListItemText className={classes.drawerListItems}>{text}</ListItemText>
-                  {icon && <ListItemIcon className={classes.drawerIcon}>{icon}</ListItemIcon> }
-                </ListItem>
-                <Collapse in={expandable === true ? open : null} timeout="auto" unmountOnExit>
-                    <RafMenu />
-                    <HelmutMenu />
-                    <TakahiroMenu />
-                </Collapse>
-                </>
-              );
-            })}
-          </List>
-      </Drawer>
+          dense
+          >
+            {itemsList.map((item, index)=> {
+              const { text, icon, onClick, expandable } = item;
+                return(
+                  <> 
+                  <ListItem button key={text} onClick={onClick} activeStyle={{fontWeight: "bold", color: "red"}}>
+                    <ListItemText className={classes.drawerListItems}>{text}</ListItemText>
+                    {icon && <ListItemIcon className={classes.drawerIcon}>{icon}</ListItemIcon> }
+                  </ListItem>
+                  <Collapse in={expandable === true ? open : null} timeout="auto" unmountOnExit>
+                      <RafMenu />
+                      <HelmutMenu />
+                      <TakahiroMenu />
+                  </Collapse>
+                  </>
+                );
+              })}
+            </List>
+        </Drawer>
+      </Paper>
     </div>
   );
 }
