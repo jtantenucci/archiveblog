@@ -7,6 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
+import { ButtonBase } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,15 +44,21 @@ export default function RafMenu() {
       </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" dense disablePadding>
-                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: "red"}} to="/FearGallery" className={classes.nested2}>
-                    <ListItemText primary="fear generation aw02" />
+              <ButtonBase>
+                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(178, 94, 99, 1), rgba(130, 53, 61, 0.5))'}} to="/FearGallery" className={classes.nested2}>
+                  <ListItemText primary="fear generation aw02" />
                 </ListItem>
-                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: "red"}} to="/ConsumedGallery" className={classes.nested2}>
-                    <ListItemText primary="consumed ss03" />
+              </ButtonBase>
+              <ButtonBase>
+                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: 'rgba(178, 94, 99, 5)'}} to="/ConsumedGallery" className={classes.nested2}>
+                  <ListItemText primary="consumed ss03" />
                 </ListItem>
-                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: "red"}} to="/VirginiaGallery" className={classes.nested2}>
-                    <ListItemText primary="virginia creeper aw03" />
+              </ButtonBase>
+              <ButtonBase>
+                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: 'rgba(178, 94, 99, 5)'}} to="/VirginiaGallery" className={classes.nested2}>
+                  <ListItemText primary="virginia creeper aw03" />
                 </ListItem>
+              </ButtonBase>
             </List>
         </Collapse>
     </List>

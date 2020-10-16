@@ -21,6 +21,19 @@ const theme = createMuiTheme ({
       default: '#212121',
     }
   },
+  action: {
+    active: 'rgba(220, 63, 63, 1)',
+    hover: 'rgba(178, 94, 99, 0.08)',
+    hoverOpacity: 0.08,
+    selected: 'rgba(178, 94, 99, 0.16)',
+    selectedOpacity: 0.16,
+    disabled: 'rgba(113, 118, 129, 0.3)',
+    disabledBackground: 'rgba(255, 255, 255, 0.12)',
+    disabledOpacity: 0.38,
+    focus: 'rgba(178, 94, 99, 0.12)',
+    focusOpacity: 0.12,
+    activatedOpacity: 0.24,
+  },  
   typography: {
     fontFamily: 'HelveticaWorld',
   },

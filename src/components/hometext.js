@@ -6,12 +6,12 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 275,
+    minWidth: 152,
     color: theme.palette.secondary.light,
     backgroundColor: theme.palette.primary.main,
+    display: 'inline-block',
   },
   pos: {
-    marginBottom: 12,
     color: theme.palette.secondary.dark,
   },
   main: {
@@ -27,9 +27,9 @@ export default function MainCard() {
     <Card className={classes.root}>
       <CardContent>
         <Typography variant="body2" component="p" className={classes.main}>
-          when it comes to archive fashion, many are confused. archive fashion is heavily valued when you can understand the significance of it within the context of the time it existed. many groundbreaking trends and stylistic decisions were made decades ago - things that would change the landscape of fashion forever. for this reason, it is very interesting to many to study reasons why things stuck around and what will come in the future that provides a similar impact on the medium as a whole.
+          {'only when you can understand the significance of it within the context of the time it was designed can archive fashion be truly appreciated. many groundbreaking trends and stylistic decisions were made decades ago - things that would change the landscape of fashion forever. for this reason, it is very interesting to many to study reasons why things stuck around and what will come in the future that provides a similar impact on the medium as a whole.'}
         </Typography>
-        <Typography variant="body2" component="p" className={classes.pos} style={{marginBottom: 0}}>
+        <Typography variant="body2" component="p" className={classes.pos}>
           {'to the archives, no longer relevant - raf simons, 2015'}
         </Typography>
       </CardContent>

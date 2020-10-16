@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function About() {
+export default function Seasons() {
     const classes = useStyles();
 
     return (
