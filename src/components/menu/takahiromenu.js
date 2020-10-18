@@ -47,13 +47,28 @@ export default function TakahiroMenu() {
       </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" dense disablePadding>
-                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                <ListItem button 
+                  component={NavLink} 
+                  to="/PeaceGallery" 
+                  className={classes.nested2}
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                  >
                     <ListItemText primary="give peace a chance aw04" />
                 </ListItem>
-                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                <ListItem button 
+                  component={NavLink} 
+                  to="/HighStreetsGallery" 
+                  className={classes.nested2}
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                  >
                     <ListItemText primary="the high streets aw05" />
                 </ListItem>
-                <ListItem button component={NavLink} to="/" className={classes.nested2}>
+                <ListItem button 
+                  component={NavLink} 
+                  to="/ClosedFeelingGallery" 
+                  className={classes.nested2}
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                  >
                     <ListItemText primary="a closed feeling aw09" />
                 </ListItem>
             </List>

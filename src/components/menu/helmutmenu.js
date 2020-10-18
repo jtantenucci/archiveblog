@@ -47,11 +47,21 @@ export default function HelmutMenu() {
       </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" dense disablePadding>
-                <ListItem button component={NavLink} to="/" className={classes.nested2}>
-                    <ListItemText primary="untitled aw98" />
+                <ListItem button 
+                  component={NavLink} 
+                  to="/UntitledGallery" 
+                  className={classes.nested2}
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                >
+                  <ListItemText primary="untitled aw98" />
                 </ListItem>
-                <ListItem button component={NavLink} to="/" className={classes.nested2}>
-                    <ListItemText primary="séance de travail aw99" />
+                <ListItem button 
+                  component={NavLink} 
+                  to="/SeanceGallery" 
+                  className={classes.nested2}
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                >
+                  <ListItemText primary="séance de travail aw99" />
                 </ListItem>
             </List>
         </Collapse>
