@@ -19,6 +19,10 @@ const useStyles = makeStyles((theme) => ({
     },
     nested2: {
         paddingLeft: theme.spacing(5),
+        '&:hover': {
+          color: theme.palette.secondary.dark,
+          textDecoration: 'none',  
+        }
     },
 }));
 

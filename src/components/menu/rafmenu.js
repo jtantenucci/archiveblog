@@ -7,7 +7,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
-import { ButtonBase } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,6 +19,11 @@ const useStyles = makeStyles((theme) => ({
     },
     nested2: {
         paddingLeft: theme.spacing(5),
+        '&:hover': {
+          color: theme.palette.secondary.dark,
+          textDecoration: 'none',  
+        },
+
     },
 }));
 
@@ -44,21 +48,27 @@ export default function RafMenu() {
       </ListItem>
         <Collapse in={open} timeout="auto" unmountOnExit>
             <List component="div" dense disablePadding>
-              <ButtonBase>
-                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(178, 94, 99, 1), rgba(130, 53, 61, 0.5))'}} to="/FearGallery" className={classes.nested2}>
+                <ListItem button component={NavLink} 
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                  to="/FearGallery" 
+                  className={classes.nested2}
+                >
                   <ListItemText primary="fear generation aw02" />
                 </ListItem>
-              </ButtonBase>
-              <ButtonBase>
-                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: 'rgba(178, 94, 99, 5)'}} to="/ConsumedGallery" className={classes.nested2}>
+                <ListItem button component={NavLink} 
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                  to="/ConsumedGallery" 
+                  className={classes.nested2}  
+                >
                   <ListItemText primary="consumed ss03" />
                 </ListItem>
-              </ButtonBase>
-              <ButtonBase>
-                <ListItem button component={NavLink} activeStyle={{fontWeight: "bold", color: 'rgba(178, 94, 99, 5)'}} to="/VirginiaGallery" className={classes.nested2}>
+                <ListItem button component={NavLink} 
+                  activeStyle={{fontWeight: "bold", color: '#212121', background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.1), rgba(255, 255, 255, 1))'}} 
+                  to="/VirginiaGallery" 
+                  className={classes.nested2}
+                >
                   <ListItemText primary="virginia creeper aw03" />
                 </ListItem>
-              </ButtonBase>
             </List>
         </Collapse>
     </List>

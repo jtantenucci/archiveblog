@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
         fontStyle: 'oblique',
     },
     homeContent: {
-        padding: theme.spacing(2),
+        padding: theme.spacing(1),
+        overflowX: 'hidden',
     },
 }));
 
@@ -35,9 +36,9 @@ export default function Home() {
     const classes = useStyles();
 
     return (
-        <main className={classes.root}>
+        <main className={classes.root} >
             <Toolbar />
-            <Grid container direction="col" spacing={2} className={classes.homeContent}>
+            <Grid container direction="col" spacing={1} className={classes.homeContent}>
                 <Grid item xs={12}>
                     <Typography variant="h2" className={classes.pageHead}>
                         what is archive fashion?

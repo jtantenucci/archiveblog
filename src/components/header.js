@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
       fontStyle: 'oblique',
       fontFamily: 'HelveticaWorld',
       color: theme.palette.secondary.light,
+      '&:hover': {
+        color: theme.palette.secondary.main,
+        textDecoration: 'none',  
+      }
   },
   containerStyle: {
       fontStyle: 'oblique',

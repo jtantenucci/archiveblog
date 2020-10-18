@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.secondary.main,
   },
   drawerIcon: {
-    
     color: theme.palette.secondary.main,
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
@@ -37,7 +36,11 @@ const useStyles = makeStyles((theme) => ({
   drawerListItems: {
     fontStyle: 'oblique',
     fontSize: '10',
-    color: theme.palette.secondary.main,
+    color: theme.palette.secondary.light,
+    '&:hover': {
+      color: theme.palette.secondary.dark,
+      textDecoration: 'none',  
+    }
   },
   menuRoot: {
     width: '100%',
@@ -99,7 +102,7 @@ const DrawerRouter = (props) => {
             const { text, icon, onClick, expandable } = item;
               return(
                 <> 
-                  <ListItem button key={text} onClick={onClick} activeStyle={{fontWeight: "bold", color: "red"}}>
+                  <ListItem button key={text} onClick={onClick} >
                   {icon && <ListItemIcon style={{ justifyContent: 'flex-start' }} className={classes.drawerIcon}>{icon}</ListItemIcon> }
                     <ListItemText style={{ justifyContent: 'flex-start'}} className={classes.drawerListItems}>{text}</ListItemText>
                   </ListItem>
