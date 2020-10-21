@@ -1,6 +1,6 @@
 import React from 'react';
-import { consumedGallery } from '../shared/consumedGallery';
-import { consumedGallery2 } from '../shared/consumedGallery';
+import { untitledGallery } from '../shared/untitledGallery';
+import { untitledGallery2 } from '../shared/untitledGallery';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
 import { Box, Grid, GridList, GridListTile, GridListTileBar, 
@@ -52,7 +52,7 @@ export default function UntitledGallery() {
                             "untitled" - autumn/winter 1998
                         </ListSubheader>
                         </GridListTile>
-                        {consumedGallery.map((tile) => (
+                        {untitledGallery.map((tile) => (
                         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar
@@ -76,7 +76,7 @@ export default function UntitledGallery() {
                             ' '
                         </ListSubheader>
                         </GridListTile>
-                        {consumedGallery2.map((tile) => (
+                        {untitledGallery2.map((tile) => (
                         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar

@@ -1,6 +1,6 @@
 import React from 'react';
-import { consumedGallery } from '../shared/consumedGallery';
-import { consumedGallery2 } from '../shared/consumedGallery';
+import { seanceGallery } from '../shared/seanceGallery';
+import { seanceGallery2 } from '../shared/seanceGallery';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
 import { Box, Grid, GridList, GridListTile, GridListTileBar, 
@@ -52,7 +52,7 @@ export default function SeanceGallery() {
                             "séance de travail" - autumn/winter 1999
                         </ListSubheader>
                         </GridListTile>
-                        {consumedGallery.map((tile) => (
+                        {seanceGallery.map((tile) => (
                         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar
@@ -76,7 +76,7 @@ export default function SeanceGallery() {
                             ' '
                         </ListSubheader>
                         </GridListTile>
-                        {consumedGallery2.map((tile) => (
+                        {seanceGallery2.map((tile) => (
                         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar

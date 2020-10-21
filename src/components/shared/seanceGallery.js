@@ -1,0 +1,146 @@
+export const seanceGallery = [
+    {
+        img: "./seance/24.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/17.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/22.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/21.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/26.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./seance/22.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./seance/11.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 12,
+        rows: 2,
+    },
+    {
+        img: "./seance/12.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 12,
+        rows: 1,
+    },
+    {
+        img: "./seance/27.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 12,
+    },
+    {
+        img: "./seance/28.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./seance/30.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 4,
+    },
+]
+
+export const seanceGallery2 = [
+    {
+        img: "./seance/25.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 12,
+        rows: 2,
+    },
+    {
+        img: "./seance/12.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/1.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/2.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/3.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./seance/4.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./seance/6.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./seance/11.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 12,
+    },
+    {
+        img: "./seance/30.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 4,
+    },
+    {
+        img: "./seance/31.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./seance/27.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./seance/34.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 4,
+    },
+]

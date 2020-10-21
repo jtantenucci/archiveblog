@@ -1,15 +1,16 @@
 import React from 'react';
+import HeaderLogo from './headerlogo';
 import { makeStyles } from '@material-ui/core/styles';
-import { NavLink } from 'react-router-dom';
 import { AppBar, Avatar, Button, ClickAwayListener, 
-  Grid, 
   Grow, MenuItem, MenuList, Paper, 
-  Popper, Toolbar, Typography } from '@material-ui/core';
+  Popper, Toolbar } from '@material-ui/core';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
       display: 'flex',
+      paddingLeft: 10,
+      paddingRight: 10,
       backgroundColor: theme.palette.primary.dark,
       flexGrow: 1,
   },
@@ -22,36 +23,6 @@ const useStyles = makeStyles((theme) => ({
   button: {
       fontFamily: 'HelveticaWorld',
       color: theme.palette.secondary.light,
-  },
-  title: {
-    paddingRight: theme.spacing(1),
-    paddingLeft: theme.spacing(1),
-    fontFamily: 'HelveticaWorld',
-    color: theme.palette.secondary.light,
-    backgroundColor: '#171819',
-    borderRadius: '5px',
-    '&:hover': {
-      color: theme.palette.secondary.main,
-      textDecoration: 'none',  
-    }
-  },
-  title2: {
-    paddingRight: theme.spacing(1),
-    paddingLeft: theme.spacing(1),
-    marginLeft: theme.spacing(1),
-    fontFamily: 'HelveticaWorld',
-    color: theme.palette.primary.main,
-    backgroundColor: '#ffffff',
-    borderRadius: '5px',
-    '&:hover': {
-      color: theme.palette.secondary.main,
-      textDecoration: 'none',  
-    }
-  },
-  title3: {
-    marginLeft: theme.spacing(1),
-    fontFamily: 'HelveticaWorld',
-    color: theme.palette.secondary.light,
   },
   containerStyle: {
       fontStyle: 'oblique',
@@ -103,23 +74,7 @@ export default function Header() {
     <div className={classes.root}>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar className={classes.root}>
-        <Grid container direction="row" justify="flex-start" alignItems="center">
-        <Grid item>
-          <Typography variant="h6" component={NavLink} to="/" className={classes.title}>
-            selected       
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography variant="h6" className={classes.title3}>
-           { "//" }  
-          </Typography>
-        </Grid>
-        <Grid item>
-          <Typography variant="h6" component={NavLink} to="/" className={classes.title2}>
-            archive
-          </Typography>
-        </Grid>
-        </Grid>
+          <HeaderLogo />
           <Button 
             ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}

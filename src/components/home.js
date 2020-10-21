@@ -3,7 +3,7 @@ import MainCard from './hometext.js';
 import HomeCard from './card';
 import HomepageGallery from './galleries/HomepageGallery';
 import { GridList, GridListTile, GridListTileBar, makeStyles } from '@material-ui/core';
-import { Card, Grid, Toolbar, Typography } from '@material-ui/core';
+import { Box, Card, Grid, Toolbar, Typography } from '@material-ui/core';
 import { homepageGallery2, homepageGallery3 } from './shared/homepageGallery.js';
 
 const useStyles = makeStyles((theme) => ({
@@ -11,6 +11,11 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         paddingLeft: 200,
         overflowX: 'hidden',
+    },
+    box: {
+        padding: '3px',
+        borderRadius: '5px',
+        background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.6), rgba(44, 45, 47, 0.8))',
     },
     title: {
         fontSize: 14,
@@ -50,10 +55,14 @@ export default function Home() {
                     <HomepageGallery />
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <HomeCard />
+                    <Box className={classes.box}>
+                        <HomeCard />
+                    </Box>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <MainCard />
+                    <Box className={classes.box}>
+                        <MainCard />
+                    </Box>
                 </Grid>
                 <Grid item xs={12} sm={8}>
                     <GridList cellHeight={400} className={classes.gridList} spacing={0} cols={12}>

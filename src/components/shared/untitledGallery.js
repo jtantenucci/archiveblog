@@ -1,0 +1,146 @@
+export const untitledGallery = [
+    {
+        img: "./untitled/03.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/15.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/05.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./untitled/26.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./untitled/06.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/07.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/49.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 12,
+        rows: 2,
+    },
+    {
+        img: "./untitled/12.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 12,
+        rows: 1,
+    },
+    {
+        img: "./untitled/35.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 12,
+    },
+    {
+        img: "./untitled/28.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./untitled/10.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 4,
+    },
+]
+
+export const untitledGallery2 = [
+    {
+        img: "./untitled/24.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 12,
+        rows: 2,
+    },
+    {
+        img: "./untitled/50.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/77.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/52.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/53.jpg",
+        title: 'thirdlook',
+        author: '',
+        cols: 3,
+    },
+    {
+        img: "./untitled/57.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./untitled/51.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 6,
+    },
+    {
+        img: "./untitled/11.jpg",
+        title: 'fourthlook',
+        author: '',
+        cols: 12,
+    },
+    {
+        img: "./untitled/36.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 4,
+    },
+    {
+        img: "./untitled/38.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./untitled/27.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 8,
+    },
+    {
+        img: "./untitled/14.jpg",
+        title: 'seventhlook',
+        author: '',
+        cols: 4,
+    },
+]
