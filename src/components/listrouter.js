@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+// eslint-disable-next-line
 import { MemoryRouter as Router, withRouter } from 'react-router';
 import RafMenu from './menu/rafmenu';
 import HelmutMenu from './menu/helmutmenu';

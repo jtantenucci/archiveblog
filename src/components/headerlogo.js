@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(1),
     paddingLeft: theme.spacing(1),
     fontFamily: 'HelveticaWorld',
+    fontWeight: "bold",
     color: theme.palette.secondary.light,
     borderRadius: '5px',
     textShadow: "0.5px 0.5px 6px darkgrey",

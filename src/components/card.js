@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minWidth: 300,
+    height: 300,
+    minWidth: 200,
     color: theme.palette.secondary.light,
     backgroundColor: theme.palette.primary.main,
   },

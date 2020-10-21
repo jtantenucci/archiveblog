@@ -4,7 +4,7 @@ import HomeCard from './card';
 import HomepageGallery from './galleries/HomepageGallery';
 import { GridList, GridListTile, GridListTileBar, makeStyles } from '@material-ui/core';
 import { Box, Card, Grid, Toolbar, Typography } from '@material-ui/core';
-import { homepageGallery2, homepageGallery3 } from './shared/homepageGallery.js';
+import { homepageGallery2, homepageGallery3, homepageGallery4 } from './shared/homepageGallery.js';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -13,9 +13,7 @@ const useStyles = makeStyles((theme) => ({
         overflowX: 'hidden',
     },
     box: {
-        padding: '3px',
         borderRadius: '5px',
-        background: 'linear-gradient(270deg, rgba(1, 1, 1, 0.6), rgba(44, 45, 47, 0.8))',
     },
     title: {
         fontSize: 14,
@@ -74,15 +72,25 @@ export default function Home() {
                         ))}
                     </GridList>
                 </Grid>
-                <Grid item xs={12}>
-                <GridList cellHeight={300} className={classes.gridList} spacing={12} cols={12}>
-                    {homepageGallery2.map((tile) => (
-                        <GridListTile component={Card} className={classes.gridListTile} key={tile.img} rows={tile.rows || 1} cols={tile.cols || 1}>
-                            <img src={tile.img} alt={tile.title} />
-                            <GridListTileBar className={classes.titleBar} title="c/o raf simons redux"/>
-                        </GridListTile>
-                    ))}
-                </GridList>
+                <Grid item xs={12} sm={4}>
+                    <GridList cellHeight={300} className={classes.gridList} spacing={0} cols={12}>
+                        {homepageGallery2.map((tile) => (
+                            <GridListTile component={Card} className={classes.gridListTile} key={tile.img} rows={tile.rows || 1} cols={tile.cols || 1}>
+                                <img src={tile.img} alt={tile.title} />
+                                <GridListTileBar className={classes.titleBar} title="c/o raf simons redux"/>
+                            </GridListTile>
+                        ))}
+                    </GridList>
+                </Grid>
+                <Grid item xs={12} sm={8}>
+                    <GridList cellHeight={300} className={classes.gridList} spacing={0} cols={12}>
+                        {homepageGallery4.map((tile) => (
+                            <GridListTile component={Card} className={classes.gridListTile} key={tile.img} rows={tile.rows || 1} cols={tile.cols || 1}>
+                                <img src={tile.img} alt={tile.title} />
+                                <GridListTileBar className={classes.titleBar} title="c/o raf simons redux"/>
+                            </GridListTile>
+                        ))}
+                    </GridList>
                 </Grid>
             </Grid>
         </main>

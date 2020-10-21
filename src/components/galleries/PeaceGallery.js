@@ -1,6 +1,6 @@
 import React from 'react';
-import { consumedGallery } from '../shared/consumedGallery';
-import { consumedGallery2 } from '../shared/consumedGallery';
+import { peaceGallery } from '../shared/peaceGallery';
+import { peaceGallery2 } from '../shared/peaceGallery';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
 import { Box, Grid, GridList, GridListTile, GridListTileBar, 
@@ -52,7 +52,7 @@ export default function PeaceGallery() {
                             "give peace a chance" - autumn/winter 2004
                         </ListSubheader>
                         </GridListTile>
-                        {consumedGallery.map((tile) => (
+                        {peaceGallery.map((tile) => (
                         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar
@@ -76,7 +76,7 @@ export default function PeaceGallery() {
                             ' '
                         </ListSubheader>
                         </GridListTile>
-                        {consumedGallery2.map((tile) => (
+                        {peaceGallery2.map((tile) => (
                         <GridListTile key={tile.img} cols={tile.cols || 1} rows={tile.rows || 1}>
                             <img src={tile.img} alt={tile.title} />
                             <GridListTileBar

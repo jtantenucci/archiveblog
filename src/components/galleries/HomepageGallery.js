@@ -28,7 +28,7 @@ export default function HomepageGallery() {
     
     return (
     <main className={classes.content}>
-        <GridList cellHeight={275} className={classes.gridList} spacing={0} cols={12}>
+        <GridList cellHeight={300} className={classes.gridList} spacing={1} cols={12}>
             {homepageGallery.map((tile) => (
                 <GridListTile component={Card} className={classes.gridListTile} key={tile.img} rows={tile.rows || 1} cols={tile.cols || 1}>
                     <img src={tile.img} alt={tile.title} />
