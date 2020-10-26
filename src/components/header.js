@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
   button: {
       fontFamily: 'HelveticaWorld',
       color: theme.palette.secondary.light,
+      borderColor: theme.palette.secondary.light,
+      paddingRight: 20,
   },
   containerStyle: {
       fontStyle: 'oblique',
@@ -76,6 +78,8 @@ export default function Header() {
         <Toolbar className={classes.root}>
           <HeaderLogo />
           <Button 
+            variant="outlined"
+            size="small"
             ref={anchorRef}
             aria-controls={open ? 'menu-list-grow' : undefined}
             aria-haspopup="true" 
