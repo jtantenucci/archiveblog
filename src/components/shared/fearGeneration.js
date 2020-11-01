@@ -5,7 +5,6 @@ export const fearGeneration = [
         title: 'firstlook',
         author: '',
         cols: 2,
-        key: 1,
     },
     {
         id: '2',

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { consumedGallery } from '../shared/consumedGallery';
 import { consumedGallery2 } from '../shared/consumedGallery';
 import { makeStyles } from '@material-ui/core/styles';
 import InfoIcon from '@material-ui/icons/Info';
-import { Box, Grid, GridList, GridListTile, GridListTileBar, 
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Grid, GridList, GridListTile, GridListTileBar, 
     IconButton, ListSubheader, Paper, Toolbar} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -34,11 +34,26 @@ const useStyles = makeStyles((theme) => ({
         color: theme.palette.secondary.light,
         backgroundColor: theme.palette.primary.main,
     },
+    paper: {
+        backgroundColor: theme.palette.primary.dark,
+    },
 }));
 
 export default function ConsumedGallery() {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState({});
     
+    const handleModalClose = () => {
+        setOpen(false);
+        setSelectedImage({});
+    };
+    
+    const imageClickHandler = tile => () => {
+        setSelectedImage(tile);
+        setOpen(true);
+    };
+
     return (
     <main className={classes.content}>
         <Paper elevation={3} variant="rounded">
@@ -60,11 +75,31 @@ export default function ConsumedGallery() {
                                 title={tile.title}
                                 subtitle={<span>by: raf simons</span>}
                                 actionIcon={
-                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                <IconButton aria-label={`info about ${tile.title}`} onClick={imageClickHandler(tile)} className={classes.icon}>
                                     <InfoIcon />
                                 </IconButton>
                                     }
                                 />
+                            <Dialog onClose={handleModalClose} open={open} maxWidth="xl">
+                            <DialogTitle className={classes.listSubheader} onClose={handleModalClose} style={{ backgroundColor:'rgba(1, 1, 1, 0.6)'}}>
+                                {selectedImage.id}
+                            </DialogTitle>
+                                <DialogContent className={classes.paper}>
+                                <img
+                                    src={selectedImage.img}
+                                    alt={selectedImage.id}
+                                    style={{ borderRadius: "5px" ,
+                                        maxHeight:'700px',
+                                        maxWidth: '900px',
+                                    }}
+                                />
+                                </DialogContent>
+                                <DialogActions style={{ backgroundColor:'rgba(1, 1, 1, 0.6)'}}>
+                                    <Button fullWidth onClick={handleModalClose} color="secondary">
+                                        return
+                                    </Button>
+                                </DialogActions>
+                            </Dialog>
                         </GridListTile>
                             ))}
                     </GridList>
@@ -84,11 +119,31 @@ export default function ConsumedGallery() {
                                 title={tile.title}
                                 subtitle={<span>by: raf simons</span>}
                                 actionIcon={
-                                <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
+                                <IconButton aria-label={`info about ${tile.title}`} onClick={imageClickHandler(tile)} className={classes.icon}>
                                     <InfoIcon />
                                 </IconButton>
                                     }
                                 />
+                            <Dialog onClose={handleModalClose} open={open} maxWidth="xl">
+                            <DialogTitle className={classes.listSubheader} onClose={handleModalClose} style={{ backgroundColor:'rgba(1, 1, 1, 0.6)'}}>
+                                {selectedImage.id}
+                            </DialogTitle>
+                                <DialogContent className={classes.paper}>
+                                <img
+                                    src={selectedImage.img}
+                                    alt={selectedImage.id}
+                                    style={{ borderRadius: "5px" ,
+                                        maxHeight:'700px',
+                                        maxWidth: '900px',
+                                    }}
+                                />
+                                </DialogContent>
+                                <DialogActions style={{ backgroundColor:'rgba(1, 1, 1, 0.6)'}}>
+                                    <Button fullWidth onClick={handleModalClose} color="secondary">
+                                        return
+                                    </Button>
+                                </DialogActions>
+                            </Dialog>
                         </GridListTile>
                             ))}
                     </GridList>
