@@ -44,7 +44,9 @@ export default function Seasons() {
             </Grid>
             <Grid container direction="row" justify="flex-end" spacing={1} className={classes.homeContent}>
                 <Grid item xs={12}>
-                    <Card elevation="0" style={{height: 1400}} className={classes.homeContent}/>
+                    <Card elevation="0" style={{height: 1400}} className={classes.homeContent}>
+            
+                    </Card>
                 </Grid>
             </Grid> 
         </main>

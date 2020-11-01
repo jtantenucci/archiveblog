@@ -17,7 +17,7 @@ const theme = createMuiTheme ({
       contrastText: '#212121',
     },
     background: {
-      paper: '#242425',
+      paper: '#131313',
       default: '#212121',
     },
     action: {
@@ -33,9 +33,16 @@ const theme = createMuiTheme ({
       focusOpacity: 0.12,
       activatedOpacity: 0.24,
     }, 
+    text: {
+      primary: '#fff',
+    },
   }, 
   typography: {
     fontFamily: 'HelveticaWorld',
+    button: {
+      fontFamily: 'HelveticaWorld',
+      textTransform: 'none',
+    }
   },
   overrides: {
     MuiLink: {

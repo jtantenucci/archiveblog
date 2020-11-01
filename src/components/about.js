@@ -39,12 +39,26 @@ export default function About() {
         <Toolbar />
             <Grid item direction="row" spacing={1} xs={12} className={classes.homeContent}>
                 <Typography variant="h2" className={classes.pageHead}>
-                    about us
+                    about
                 </Typography>
             </Grid>
             <Grid container direction="row" justify="flex-end" spacing={1} className={classes.homeContent}>
                 <Grid item xs={12}>
-                    <Card elevation="0" style={{height: 1400}} className={classes.homeContent}/>
+                    <Card elevation="0" style={{height: 1400}} className={classes.homeContent}>
+                        <Typography variant="h4" style={{ fontWeight: 'bold', letterSpacing: '0.02em'}}>
+                            this is a web design project created from my desire to display images of archived and significant fashion shows of equally significant designers.
+                        </Typography>
+                            <br></br>
+                        <Typography variant="body1" style={{ fontStyle: 'oblique'}}>
+                            the work listed consists of a few of my personal favorite designers: raf simons, helmut lang, and takahiro miyashita.
+                        </Typography>
+                            <br></br>
+                        <Typography variant="body1" style={{ fontStyle: 'oblique'}}>
+                            my goal was to display images within different stylized grids that allow for a viewing experience that is both interactive and interesting,
+                            the images were taken from runway shows and other supplementary material. they're saved within the public file and built into arrays that are mapped out
+                            within the accompanying components. 
+                        </Typography>
+                    </Card>                
                 </Grid>
             </Grid> 
         </main>

@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
       marginRight: theme.spacing(2),
   },
   button: {
-      fontFamily: 'HelveticaWorld',
       color: theme.palette.secondary.light,
       borderColor: theme.palette.secondary.light,
       paddingRight: 20,
